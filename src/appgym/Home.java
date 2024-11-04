@@ -37,14 +37,19 @@ class Home extends javax.swing.JFrame {
     /**
      * Creates new form Home
      */
+    
     private String Fullname="";
-   
-    private String Gender="";
+     private String Gender="";
     private String Gmail="";
     private String Address="";
     private String Phonenumber="";
     static String Username;
     private String Password="";
+    private String membershipdate="";
+    private String card="";
+    private String room="";
+    private String dateusecard="";
+    private String trainer="";
     public Home() {
         initComponents();
       
@@ -58,7 +63,7 @@ class Home extends javax.swing.JFrame {
         TextCardClass.setText("<html>Bước đầu hoàn hảo cho một cuộc sống khỏe mạnh.</html>");
         TextCardVip.setText("<html>Trải nghiệm đẳng cấp, xứng tầm phong cách sống.</html>");
         TextCardPremium.setText("<html>Gói tập toàn diện, đáp ứng mọi nhu cầu.</html>");
-        
+         setinforcard(username);
          fetchUserInfo(username);
         jtfusername.setText(username);
         jtfusernametab2.setText(username);
@@ -115,12 +120,12 @@ class Home extends javax.swing.JFrame {
         CardInfor = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jtftrainer = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jtfdatecard = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jtfroom = new javax.swing.JTextField();
+        jtfgymcard = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -606,32 +611,32 @@ class Home extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setText("Trainer:");
 
-        jTextField6.setText("Trainer");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jtftrainer.setText("Trainer");
+        jtftrainer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jtftrainerActionPerformed(evt);
             }
         });
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel14.setText("Date:");
 
-        jTextField7.setText("Date");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jtfdatecard.setText("Date");
+        jtfdatecard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jtfdatecardActionPerformed(evt);
             }
         });
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel16.setText("Room:");
 
-        jTextField9.setText("Room");
+        jtfroom.setText("Room");
 
-        jTextField5.setText("Type card");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jtfgymcard.setText("Type card");
+        jtfgymcard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jtfgymcardActionPerformed(evt);
             }
         });
 
@@ -644,13 +649,13 @@ class Home extends javax.swing.JFrame {
                 .addGroup(CardInforLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
+                    .addComponent(jtftrainer)
+                    .addComponent(jtfgymcard, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(CardInforLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfroom, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfdatecard, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -662,7 +667,7 @@ class Home extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfgymcard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE))
@@ -670,13 +675,13 @@ class Home extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfdatecard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(CardInforLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtftrainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfroom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
         );
 
@@ -885,6 +890,11 @@ class Home extends javax.swing.JFrame {
                 jButton2MouseExited(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -946,6 +956,11 @@ class Home extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
+        jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel27MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -993,6 +1008,11 @@ class Home extends javax.swing.JFrame {
         jLabel25.setText("jLabel25");
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
+        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel28MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1037,6 +1057,11 @@ class Home extends javax.swing.JFrame {
         jLabel26.setText("jLabel26");
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
+        jLabel29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel29MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -1584,17 +1609,17 @@ class Home extends javax.swing.JFrame {
         CardInfor.setBackground(new Color(223,223,223));
     }//GEN-LAST:event_CardInforMouseMoved
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jtfgymcardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfgymcardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jtfgymcardActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jtfdatecardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfdatecardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jtfdatecardActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jtftrainerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtftrainerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jtftrainerActionPerformed
 
     private void PersonalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PersonalMouseExited
         Personal.setBackground(new Color(229,229,229));
@@ -1669,6 +1694,70 @@ class Home extends javax.swing.JFrame {
     private void TableMembersAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_TableMembersAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_TableMembersAncestorAdded
+
+    private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
+        jTextField13.setText("500.000đ");
+        jTextField8.setText("CLASSIC");
+        membershipdate="30 day";
+        card="classic";
+        trainer="Arnold";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+        
+    }//GEN-LAST:event_jLabel27MouseClicked
+
+    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
+        jTextField13.setText("1.000.000đ");
+        jTextField8.setText("VIP");
+        membershipdate="30 day";
+        card="classic";
+        trainer="Lee Haney";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+       
+    }//GEN-LAST:event_jLabel28MouseClicked
+
+    private void jLabel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel29MouseClicked
+         jTextField13.setText("1.500.000đ");
+        jTextField8.setText("PREMIUM");
+         membershipdate="30 day";
+        card="classic";
+        trainer="Dorian Yates";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+       
+    }//GEN-LAST:event_jLabel29MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(jTextField8.getText().equals("CLASSIC"))
+        {
+             membershipdate="30 day";
+        card="classic";
+        trainer="Arnold";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+        String username=jtfusername.getText();
+        updatecard(username,membershipdate,card,room,trainer,dateusecard) ;
+        }else if(jTextField8.getText().equals("VIP"))
+        {
+          
+        membershipdate="30 day";
+        card="VIP";
+        trainer="Lee Haney";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+        String username=jtfusername.getText();
+        updatecard(username,membershipdate,card,room,trainer,dateusecard) ;
+        }else if(jTextField8.getText().equals("PREMIUM"))
+        { membershipdate="30 day";
+          card="PREMIUM";
+        trainer="Dorian Yates";
+        room="LEVANVIET ";
+        dateusecard="30 day";
+        String username=jtfusername.getText();
+        updatecard(username,membershipdate,card,room,trainer,dateusecard) ;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1803,7 +1892,68 @@ private static Connection getConnection() throws Exception {
             e.printStackTrace();
         }
     }
+  private void setinforcard(String username) {
+        String query = "SELECT * FROM account WHERE username = ?";
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
 
+            stmt.setString(1, username);
+            ResultSet resultSet = stmt.executeQuery();
+
+            if (resultSet.next()) {
+                jtfgymcard.setText(resultSet.getString("card"));
+                jtfdatecard.setText(resultSet.getString("dateusecard"));
+                jtfroom.setText(resultSet.getString("room"));
+                jtftrainer.setText(resultSet.getString("trainer"));
+               
+            } else {
+                JOptionPane.showMessageDialog(this, "User not found!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void updatecard(String username,String membershipdate,String card,String room,String trainer,String dateusecard) {
+        String query = "SELECT * FROM account WHERE username = ?";
+        String updateSql = "UPDATE account SET membershipdate = ?, card = ?, room = ?, trainer = ?, dateusecard= ? WHERE username = ?";
+
+        try (Connection conn = getConnection();
+             PreparedStatement findStmt = conn.prepareStatement(query)) {
+
+            // Tìm kiếm user theo username
+            findStmt.setString(1, username);
+            ResultSet resultSet = findStmt.executeQuery();
+
+            if (resultSet.next()) {
+                System.out.println("User found. Updating information...");
+
+                // Tạo `PreparedStatement` chỉ khi user tồn tại
+                try (PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
+                    updateStmt.setString(1, membershipdate);
+            
+                    updateStmt.setString(2, card);
+                    updateStmt.setString(3, room);
+                    updateStmt.setString(4, trainer);
+                    updateStmt.setString(5,dateusecard);
+                    updateStmt.setString(6, username); // Điều kiện WHERE username = ?
+
+                    // In câu lệnh để kiểm tra cú pháp
+                    System.out.println("Executing query: " + updateSql);
+
+                    // Thực thi cập nhật
+                    int rowsUpdated = updateStmt.executeUpdate();
+                    if (rowsUpdated > 0) {
+                        System.out.println("Thông tin của user đã được cập nhật thành công!");
+                    }
+                }
+            } else {
+                System.out.println("User không tồn tại với username đã cho.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+}
     // Phương thức cập nhật thông tin bổ sung của người dùng
  public static void check(String username) {
         String query = "SELECT * FROM account WHERE username = ?";
@@ -2028,16 +2178,16 @@ private static Connection getConnection() throws Exception {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextField jtfaddress;
+    private javax.swing.JTextField jtfdatecard;
     private javax.swing.JTextField jtffullname;
     private javax.swing.JTextField jtfgender;
+    private javax.swing.JTextField jtfgymcard;
     private javax.swing.JTextField jtfphone;
+    private javax.swing.JTextField jtfroom;
+    private javax.swing.JTextField jtftrainer;
     private javax.swing.JTextField jtfusername;
     private javax.swing.JTextField jtfusernametab2;
     // End of variables declaration//GEN-END:variables

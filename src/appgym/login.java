@@ -14,8 +14,7 @@ import javax.swing.JOptionPane;
 
 
 class login extends JFrame {
-    ConnectionDataBase cn = new ConnectionDataBase();
-    Connection conn;
+    
     /**
      * Creates new form login
      */
@@ -178,6 +177,11 @@ class login extends JFrame {
 
         txtPassword.setFont(txtPassword.getFont());
         txtPassword.setBorder(null);
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
+            }
+        });
         jPanel3.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 180, 30));
 
         forgetPassword.setText("Foget password?");
@@ -358,6 +362,10 @@ class login extends JFrame {
     private void clickSignUpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickSignUpMouseExited
         clickSignUp.setForeground(new Color(0,0,0));
     }//GEN-LAST:event_clickSignUpMouseExited
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     /**
      * @param args the command line arguments

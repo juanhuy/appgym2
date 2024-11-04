@@ -716,14 +716,14 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabel12" min="-2" pref="72" max="-2" attributes="0"/>
                               <Component id="jLabel13" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField5" pref="227" max="32767" attributes="0"/>
+                              <Component id="jtftrainer" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jtfgymcard" pref="227" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="77" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel16" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="jTextField9" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="jtfroom" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="jtfdatecard" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
                               <Component id="jLabel14" min="-2" pref="88" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -738,7 +738,7 @@
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtfgymcard" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="13" max="32767" attributes="0"/>
@@ -747,15 +747,15 @@
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtfdatecard" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtftrainer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtfroom" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
@@ -779,12 +779,12 @@
                     <Property name="text" type="java.lang.String" value="Trainer:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
+                <Component class="javax.swing.JTextField" name="jtftrainer">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Trainer"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtftrainerActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel14">
@@ -795,12 +795,12 @@
                     <Property name="text" type="java.lang.String" value="Date:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
+                <Component class="javax.swing.JTextField" name="jtfdatecard">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Date"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfdatecardActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
@@ -811,17 +811,17 @@
                     <Property name="text" type="java.lang.String" value="Room:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField9">
+                <Component class="javax.swing.JTextField" name="jtfroom">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Room"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField5">
+                <Component class="javax.swing.JTextField" name="jtfgymcard">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Type card"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfgymcardActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1252,6 +1252,7 @@
                   <Events>
                     <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseMoved"/>
                     <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseExited"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -1319,6 +1320,9 @@
                       <Image iconType="3" name="/icon/adminIcons/icons8_Return_Purchase_26px.png"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel27MouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="TextCardClass">
                 </Component>
@@ -1384,6 +1388,9 @@
                       <Image iconType="3" name="/icon/adminIcons/icons8_Return_Purchase_26px.png"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel28MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1453,6 +1460,9 @@
                       <Image iconType="3" name="/icon/adminIcons/icons8_Return_Purchase_26px.png"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel29MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/Home.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/database.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/EmailService.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/Main.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/ResetPassword.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/Users.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/test.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/UpdateInfor.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/dienthongtinkhachhang.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/login.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/register.java</file>
+            <file>file:/C:/Users/huyju/Documents/NetBeansProjects/test/src/appgym/employeeData.java</file>
         </group>
     </open-files>
 </project-private>
